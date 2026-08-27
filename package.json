@@ -1,0 +1,46 @@
+{
+  "name": "@sharesync/sharedb-mysql",
+  "version": "1.0.0",
+  "description": "MySQL database adapter for ShareDB (ShareSync fork) — the main backend op/snapshot store, following the sharedb-mongo convention",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "schema.sql"
+  ],
+  "scripts": {
+    "test": "mocha",
+    "test-cover": "nyc --temp-dir=coverage -r text -r lcov npm test",
+    "prepack": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sharesync/sharedb-mysql.git"
+  },
+  "author": "Benji Smith",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "dependencies": {
+    "mysql2": "^3.11.0"
+  },
+  "peerDependencies": {
+    "@sharesync/sharedb": "^6.5.0"
+  },
+  "devDependencies": {
+    "@sharesync/ot-json1-presence": "^3.0.1",
+    "@sharesync/rich-text": "^5.0.2",
+    "@sharesync/sharedb": "^6.5.0",
+    "async": "^3.2.4",
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0",
+    "nyc": "^15.1.0",
+    "sinon": "^15.2.0",
+    "sinon-chai": "^3.7.0"
+  }
+}
